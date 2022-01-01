@@ -1,0 +1,50 @@
+.services {
+  padding-top: 35px;
+  padding-bottom: 40px;
+  background-color: var(--color-gallery);
+
+  &__link {
+    margin: 0 auto;
+    border-radius: 100px;
+    padding: 20px 95px;
+    width: 100%;
+    max-width: 765px;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+
+    @include tablet {
+      padding: 20px 75px;
+    }
+
+    @include mobile-l {
+      padding: 20px 20px;
+      width: 90%;
+      font-weight: 500;
+    }
+
+    @include mobile {
+      padding: 5px 20px;
+    }
+
+    @include mobile-s {
+      font-size: 20px;
+    }
+  }
+
+  p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.4;
+    letter-spacing: 0.015em;
+    text-align: center;
+
+    @include mobile-s {
+      font-size: 14px;
+    }
+  }
+
+  span {
+    font-weight: 500;
+  }
+}

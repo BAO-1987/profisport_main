@@ -1,0 +1,141 @@
+.footer {
+  padding: 50px 0;
+
+  &__top {
+    @include flex-all-sb;
+
+    margin-bottom: 40px;
+
+    @include mobile-s {
+      flex-direction: column;
+    }
+  }
+
+  &__copyright {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+
+  &-title {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--color-grey-100);
+  }
+
+  &__middle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &-nav {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin-right: 45px;
+    gap: 45px;
+
+    @include mobile-l {
+      margin: 0;
+      gap: 25px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, auto);
+      gap: 20px;
+    }
+
+    @include mobile-s {
+      justify-content: center;
+      grid-template-columns: repeat(1, auto);
+      text-align: center;
+    }
+
+    &__link {
+      transition: color 0.5s linear;
+
+      &:focus {
+        outline: 2px solid var(--color-orange);
+        outline-offset: 2px;
+      }
+
+      &:hover {
+        color: var(--color-orange);
+      }
+    }
+  }
+
+  &__bottom {
+    font-size: 10px;
+    text-align: center;
+  }
+}
+
+.social {
+  &__list {
+    display: flex;
+
+    @include mobile-s {
+      justify-content: center;
+      padding-top: 25px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 15px;
+  }
+
+  &__link {
+    display: block;
+    width: 25px;
+    height: 25px;
+    transition: all 0.5s ease;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:hover {
+      transform: rotate(180deg) scale(1.2);
+    }
+  }
+}
+
+.address {
+  font-style: normal;
+  font-size: 12px;
+
+  @include tablet {
+    text-align: center;
+  }
+
+  &__item:first-child,
+  &__item:nth-child(3n) {
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    transition: color 0.5s linear;
+
+    &:focus {
+      outline: 2px solid var(--color-orange);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-orange);
+    }
+
+    &:active {
+      color: var(--color-active);
+    }
+  }
+}

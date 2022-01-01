@@ -1,0 +1,117 @@
+.new {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+
+    @include tablet {
+      justify-content: center;
+      grid-template-columns: repeat(2, auto);
+      gap: 30px;
+    }
+
+    @include mobile-l {
+      gap: 10px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(1, auto);
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__article {
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+    padding: 15px 0 15px 15px;
+    width: 100%;
+    min-height: 335px;
+    max-width: 260px;
+    background-color: var(--color-white);
+    filter: drop-shadow(0 4px 25px rgba(0, 0, 0, 0.19));
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border-radius: 10px;
+      background-image: url("../img/biceps-after.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-color: var(--color-orange);
+      opacity: 0;
+    }
+
+    a {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 25;
+      }
+    }
+
+    span {
+      position: relative;
+      left: -15px;
+      display: block;
+      border-radius: 0 10px 10px 0;
+      padding: 15px 0 15px 15px;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      color: var(--color-blue);
+      background-color: #efefef;
+      transition: all 0.5s ease;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 75px;
+        width: 110px;
+        height: 12px;
+        background-image: url("../img/sprite.svg#arrow");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0;
+      }
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+
+    &:hover span::before {
+      opacity: 1;
+    }
+
+    &:hover span {
+      left: 10px;
+      top: -120px;
+      border-radius: 0;
+      padding: 0;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
+      font-size: 16px;
+      color: var(--color-white);
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+}

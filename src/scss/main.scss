@@ -1,0 +1,15 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+@import "vendor";
+@import "./components/header";
+@import "./components/footer";
+@import "./components/home/hero";
+@import "./components/home/devices";
+@import "./components/home/projects";
+@import "./components/home/new";
+@import "./components/home/services";
+@import "./components/home/catalog";
+@import "./components/home/subscribe";
