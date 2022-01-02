@@ -10,12 +10,9 @@ search.addEventListener('click', (e) => {
 });
 
 closeBtn.addEventListener('click', (e) => {
-  if (e.target == form) {
-    closeForm();
-  }
+ form.classList.remove('mobile__search--open');
+ overlay.classList.remove('overlay--active')
+ console.log(closeBtn);
+
 });
 
-const closeForm = () => {
-  modal.classList.remove('mobile__search--open');
-  disableScroll();
-}
