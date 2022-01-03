@@ -6,10 +6,14 @@
 @import "vendor";
 @import "./components/header";
 @import "./components/footer";
+@import "./components/article";
 @import "./components/home/hero";
 @import "./components/home/devices";
 @import "./components/home/projects";
 @import "./components/home/new";
 @import "./components/home/services";
-@import "./components/home/catalog";
+@import "./components/home/assortment";
 @import "./components/home/subscribe";
+@import "./components/error/error-page";
+@import "./components/breadcrumbs";
+@import "./components/catalog";

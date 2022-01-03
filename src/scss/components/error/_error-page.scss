@@ -1,0 +1,42 @@
+.error-page {
+  h1 {
+    margin: 0;
+    margin-bottom: 65px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 144px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--color-orange);
+
+    @include mobile-s {
+      font-size: 96px;
+    }
+
+    span {
+      color: var(--color-white);
+      background-color: var(--color-orange);
+    }
+  }
+
+  p {
+    font-weight: 500;
+    font-size: 36px;
+    text-align: center;
+
+    @include mobile-s {
+      font-size: 24px;
+    }
+  }
+
+  &__content {
+    @include flex-all-center;
+
+    margin-bottom: 100px;
+  }
+
+  &__link {
+    margin-right: 30px;
+  }
+
+}

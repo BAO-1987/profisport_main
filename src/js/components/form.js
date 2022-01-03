@@ -13,6 +13,5 @@ closeBtn.addEventListener('click', (e) => {
  form.classList.remove('mobile__search--open');
  overlay.classList.remove('overlay--active')
  console.log(closeBtn);
-
 });
 
