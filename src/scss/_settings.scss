@@ -36,8 +36,7 @@ body {
   color: var(--color-white);
   background-color: var(--color-orange);
   transition: box-shadow 0.6s linear, background-color 0.6s linear;
-  cursor: pointer;
-
+ 
   &:focus {
     outline: 2px solid var(--color-orange);
     outline-offset: 2px;
@@ -52,7 +51,7 @@ body {
   }
 
   &--second {
-    padding: 7px 10px 7px 40px;
+    padding: 8px 10px 8px 40px;
     font-weight: 600;
     font-size: 12px;
   }
@@ -63,7 +62,6 @@ body {
   padding: 0;
   background: transparent;
   transition: all 0.5s linear;
-  cursor: pointer;
 }
 
 .visually-hidden {
@@ -138,7 +136,6 @@ section {
   height: var(--burger-height);
   color: #000;
   background-color: transparent;
-  cursor: pointer;
 
   @include burger;
 
@@ -188,4 +185,24 @@ section {
     color: var(--color-orange);
     background-color: var(--color-white);
   }
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+  stroke: var(--color-grey);
+  stroke-width: 3px;
+
+  &:hover {
+    stroke: var(--color-black);
+  }
+
+  &--revers {
+    transform: rotate(180deg);
+  }
+}
+
+.pagination__icon {
+  width: 25px;
+  height: 25px;
 }

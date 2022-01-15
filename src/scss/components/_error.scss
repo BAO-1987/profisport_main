@@ -1,4 +1,9 @@
-.error-page {
+.error {
+
+  +.breadcrumbs {
+    margin-bottom: 100px;
+  }
+
   h1 {
     margin: 0;
     margin-bottom: 65px;
@@ -38,5 +43,4 @@
   &__link {
     margin-right: 30px;
   }
-
 }

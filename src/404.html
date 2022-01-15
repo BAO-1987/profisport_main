@@ -19,14 +19,35 @@
     @include('html/_header.html')
 
     <main class="main">
-   
 
-      @include('html/error/_error-page.html')
+      <div class="container">
 
+        <section class="error">
           
+          @loop("html/_breadcrumbs.html",[{
+          link: "404"},
+          ])
+
+        <h1>40<span>4</span></h1>
+
+        <p>Ошибка 404! Страница не найдена!</p>
+
+        <div class="error__content">
+
+          <a class="error__link link" href="#">На главную</a>
+
+          <a class="error__link link link--reverse" href="#">В каталог</a>
+
+        </div>
+
+        </section>
+
+      </div>
+
+
     </main>
 
-     @include('html/_footer.html')
+    @include('html/_footer.html')
 
   </div>
 

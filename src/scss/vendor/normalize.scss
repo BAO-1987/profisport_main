@@ -1,7 +1,13 @@
 html {
   box-sizing: border-box;
   line-height: 1.15;
-  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 main {
@@ -68,6 +74,7 @@ img {
   border-style: none;
   height: auto;
   max-width: 100%;
+  object-fit: cover;
 }
 
 button,
@@ -91,26 +98,18 @@ select {
   text-transform: none;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-  -webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-[type="button"]::-moz-focus-inner,
-[type="reset"]::-moz-focus-inner,
-[type="submit"]::-moz-focus-inner {
-  border-style: none;
+button {
+  appearance: none;
+  overflow: visible;
+  margin: 0;
+  border: none;
   padding: 0;
-}
-
-button:-moz-focusring,
-[type="button"]:-moz-focusring,
-[type="reset"]:-moz-focusring,
-[type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  width: auto;
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  line-height: normal;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 fieldset {
@@ -147,15 +146,15 @@ textarea {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: textfield;
+  appearance: textfield;
 }
 
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
+  appearance: none;
 }
 
 ::-webkit-file-upload-button {
-  -webkit-appearance: button;
+  appearance: button;
   font: inherit;
 }
 
@@ -175,15 +174,16 @@ template {
   display: none;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 ul,
-ol {
+ol,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
 }

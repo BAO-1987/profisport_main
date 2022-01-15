@@ -22,11 +22,7 @@
        spaceBetween: 20,
      },
 
-     768: {
-       slidesPerView: 2,
-     },
-
-     992: {
+         992: {
        slidesPerView: 3,
      }
    }

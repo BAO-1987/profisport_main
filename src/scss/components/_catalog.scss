@@ -7,28 +7,54 @@
 
   &__inner {
     display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 55px;
     gap: 40px;
-    grid-template-columns: 1fr auto;
+
+    @include tablet {
+      justify-content: center;
+      grid-template-columns: auto;
+    }
+  }
+
+  &__desc {
+    @include tablet {
+      display: grid;
+      justify-content: center;
+    }
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+    display: none;
+
+    &--active {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+
+      @include tablet {
+        order: -1;
+        gap: 20px;
+      }
+
+      @include mobile-l {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
   }
 
   &-filter {
     &__item {
       @include bg-cover;
 
-      cursor: pointer;
       position: relative;
+      margin-bottom: 40px;
       border-radius: 10px;
       width: 100%;
       min-height: 110px;
       max-width: 350px;
       filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.19));
-      margin-bottom: 40px;
+      cursor: pointer;
 
       span {
         position: absolute;
@@ -54,19 +80,67 @@
         text-transform: uppercase;
         color: var(--color-big-stone);
         background-color: var(--color-white);
+        transition: color 0.5s linear;
       }
 
-      // a {
-      //   &::before {
-      //     content: "";
-      //     position: absolute;
-      //     left: 0;
-      //     right: 0;
-      //     top: 0;
-      //     bottom: 0;
-      //     z-index: 20;
-      //   }
-      // }
+      a {
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 20;
+        }
+      }
+
+      &:hover h2 {
+        color: var(--color-orange);
+      }
+    }
+  }
+
+  &-form {
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    background-color: var(--color-gallery);
+
+    &__inner {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+      padding: 35px 40px;
+      text-align: center;
+      gap: 25px;
+    }
+
+    h2 {
+      font-family: "Mulish", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &__area {
+      appearance: none;
+      outline: 0;
+      border: 1.5px solid var(--color-black);
+      border-radius: var(--btn-big);
+      padding: 15px 30px;
+      width: 100%;
+      max-width: 220px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.3;
+      color: rgba(0, 0, 0, 0.8);
+      background-color: var(--color-gallery);
+
+      &:focus {
+        border: 1.5px solid var(--color-orange);
+      }
     }
   }
 }

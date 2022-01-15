@@ -2,12 +2,15 @@
   padding-top: 40px;
   background-color: var(--color-gallery);
 
-  &__list {
+  &__slider {
     display: none;
   }
 
-  &__list--active {
-    display: flex;
+  &__slider--active {
+    display: block;
+  }
+
+  &__list {
     margin-bottom: 50px;
   }
 
@@ -156,23 +159,12 @@
   margin-right: 50px;
 }
 
-.icon {
-  width: 35px;
-  height: 35px;
-  stroke: var(--color-black);
-  stroke-width: 3px;
-
-  &--revers {
-    transform: rotate(180deg);
-  }
-}
-
 .btn-reset.swiper-button-disabled .icon {
   stroke: var(--color-grey);
 }
 
 .btn-reset:hover .icon {
-  stroke: var(--color-orange);
+  stroke: var(--color-black);
 }
 
 .swiper-pagination-bullet {

@@ -1,10 +1,9 @@
 .breadcrumbs {
+  margin-bottom: 55px;
   padding-top: 35px;
 
   &__list {
     @include flex-v-center;
-
-    margin-bottom: 170px;
   }
 
   &__item:not(:last-child) {

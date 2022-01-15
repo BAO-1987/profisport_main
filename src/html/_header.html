@@ -36,57 +36,88 @@
 
     </nav>
 
-    <button class="burger btn-reset" type="button" aria-label="Открыть меню">
+    <button class="burger" type="button" aria-label="Открыть меню">
       <span class="burger__line"></span>
     </button>
 
-    <div class="header-actions">
+    <ul class="header__actions">
 
-      <div class="header-phone">
+      <li class="header__actions-item header__actions-item--phone">
 
-        <a class="header-phone__link btn btn--second" href="tel:+7(999)9999999">+7 (999) 999-99-99</a>
+        <a class="header__actions-link header__actions-link--phone btn btn--second" href="tel:+7(999)9999999">+7 (999)
+          999-99-99</a>
 
         <span>Режим: с 9 до 22 ежедневно</span>
 
-      </div>
+      </li>
 
-      <form class="form__search" action="#">
+      <li class="header__actions-item">
 
-        <label class="form__label">
+        <form class="form" action="#">
+          
+          <button class="form__close btn-reset" type="button">
 
-          <span class="visually-hidden">Поиск</span>
+            <span class="visually-hidden">закрытие поиска</span>
 
-          <input class="form__input" type="search" name="search" placeholder="">
+            <svg>
+              <use xlink:href="img/sprite.svg#close"></use>
+            </svg>
 
-        </label>
+          </button>
 
-        <button class="form__btn btn-reset" type="submit"></button>
+          <label class="form__label">
 
-      </form>
+            <span class="visually-hidden">Поиск на сайте</span>
 
-      <a class="header-actions__link btn btn--second" href="#">Вход</a>
+            <input class="form__input" type="search" name="search" placeholder="">
 
-    </div>
+          </label>
 
-    <div class="mobile">
+          <button class="form__btn btn-reset" type="submit"></button>
 
-      <button class="mobile__btn btn-reset" type="button">
+        </form> 
+    
+      </li>
 
-        <svg>
-          <use xlink:href="img/sprite.svg#search-big"></use>
-        </svg>
+      <li class="header__actions-item">
 
-      </button>
+        <a class="header__actions-link btn btn--second" href="#">Вход</a>
 
-      <a class="mobile__link" href="#">
+      </li>
 
-        <svg>
-          <use xlink:href="img/sprite.svg#pearson-big"></use>
-        </svg>
+    </ul>
 
-      </a>
+    <ul class="mobile">
 
-      <div class="mobile__search">
+      <li class="mobile__item">
+
+        <button class="mobile__btn btn-reset" type="button">
+
+          <span class="visually-hidden">открытие поиска</span>
+
+          <svg>
+            <use xlink:href="img/sprite.svg#search-big"></use>
+          </svg>
+
+        </button>
+
+      </li>
+
+      <li class="mobile__item">
+
+        <a class="mobile__link" href="#">
+
+          <span class="visually-hidden">вход на сайт</span>
+
+          <svg>
+            <use xlink:href="img/sprite.svg#pearson-big"></use>
+          </svg>
+
+        </a>
+
+      </li>
+
+      <li class="mobile__item mobile__item--form">
 
         <form class="mobile-form" action="#">
 
@@ -99,19 +130,23 @@
 
           <label class="mobile-form__label">
 
-            <span class="visually-hidden">Поиск</span>
+            <span class="visually-hidden">поиск</span>
 
             <input class="mobile-form__input" type="search" name="search" placeholder="">
 
           </label>
 
-          <button class="mobile-form__btn btn-reset" type="submit"></button>
+          <button class="mobile-form__btn btn-reset" type="submit">
+
+            <span class="visually-hidden">закрытие поиска</span>
+
+          </button>
 
         </form>
 
-      </div>
+      </li>
 
-    </div>
+    </ul>
 
   </div>
 
