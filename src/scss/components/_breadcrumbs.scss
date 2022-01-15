@@ -6,17 +6,42 @@
     @include flex-v-center;
   }
 
-  &__item:not(:last-child) {
+  &__item {
     position: relative;
-    margin-right: 15px;
-    font-weight: 500;
-    color: var(--color-orange);
+  }
 
-    &::before {
+  &__item:not(:last-child) {
+    margin-right: 15px;
+
+    &::after {
       content: "/";
       position: absolute;
       right: -10px;
       color: var(--color-black);
+    }
+  }
+
+  &__link {
+    font-weight: 500;
+    color: var(--color-orange);
+    transition: color 0.3s ease-in-out;
+
+    &:not([href]) {
+      font-weight: 300;
+      color: var(--color-black);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-active);
+      outline-offset: 2px;
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+
+    &:active {
+      color: var(--color-active);
     }
   }
 }

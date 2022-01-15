@@ -55,6 +55,13 @@ body {
     font-weight: 600;
     font-size: 12px;
   }
+
+  &--reverse {
+    border: 1px solid var(--color-orange);
+    color: var(--color-orange);
+    background-color: var(--color-white);
+  }
+  
 }
 
 .btn-reset {
@@ -166,26 +173,7 @@ section {
   }
 }
 
-.link {
-  appearance: none;
-  display: block;
-  border: 1px solid var(--color-orange);
-  border-radius: var(--btn-big);
-  padding: 14px 40px;
-  font: inherit;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
-  color: var(--color-white);
-  background-color: var(--color-orange);
-  transition: box-shadow 0.6s linear, background-color 0.6s linear;
-  cursor: pointer;
 
-  &--reverse {
-    color: var(--color-orange);
-    background-color: var(--color-white);
-  }
-}
 
 .icon {
   width: 35px;

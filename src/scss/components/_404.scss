@@ -1,6 +1,5 @@
 .error {
-
-  +.breadcrumbs {
+  .breadcrumbs {
     margin-bottom: 100px;
   }
 
@@ -14,17 +13,18 @@
     text-align: center;
     color: var(--color-orange);
 
-    @include mobile-s {
-      font-size: 96px;
-    }
-
     span {
       color: var(--color-white);
       background-color: var(--color-orange);
     }
+
+    @include mobile-s {
+      font-size: 96px;
+    }
   }
 
   p {
+    margin-bottom: 55px;
     font-weight: 500;
     font-size: 36px;
     text-align: center;
@@ -40,7 +40,17 @@
     margin-bottom: 100px;
   }
 
-  &__link {
+  &__link:not(:last-child) {
     margin-right: 30px;
+
+    @include mobile-s {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    @include mobile-s {
+      padding: 10px 25px;
+    }
   }
 }
